@@ -1,0 +1,12 @@
+:root {
+    font-size: 22px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #dfdfeb;
+    --bg-secondary: #141418;
+}
+body {
+    margin: 5px;
+    padding: 15px;
+    background: var(--bg-primary);
+}
