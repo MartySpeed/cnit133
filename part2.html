@@ -40,5 +40,63 @@
         Hint: For finding the smallest and largest number, use the Math 
         Object Methods of min and max.  
     </p>
+
+    <script>
+        //variables
+        var s1, s2, s3, sum, average, product, sumTotal, averageTotal, productTotal;
+        
+        num1 = 0;
+        num2 = 0;
+        num3 = 0;
+        sum = 0;
+        average = 0;
+        product = 0;
+        sumTotal = 0;
+        averageTotal = 0;
+        productTotal = 0;
+        
+        //output table
+        document.write("<div align=\"center\">");
+        
+        document.write("<form name='myform'>");
+        
+        document.write("<table border=\"1\">");
+        
+        document.write("<tr><th align=\"center\" colspan=\"3\">Howework 2 Part 2</th></tr>");
+        
+        document.write("<tr><th>Number 1</th><th>Number 2</th><th>Number 3</th></tr>");
+        
+        document.write("<tr><td><input type=\"text\" autofocus name=\"no1\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" autofocus name=\"no2\" class=\"r\" size=\"20\"></td></td><td><input type =\"text\" autofocus name=\"no3\" class=\"r\" size=\"20\"</td></td></tr>");
+        
+        document.write("<tr><th>Sum Total</th><th>Average Total</th><th>Product Total</th></tr>");
+        
+        document.write ("<tr><td><input type=\"text\" disabled=\"disabled\" autofocus name=\"sTotal\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" disabled=\"disabled\" autofocus name=\"aTotal\" class=\"r\" size=\"20\"></td><td><input type=\"text\" disabled=\"disabled\" name=\"pTotal\" class=\"r\" size=\"20\"></td></tr>");
+        
+        document.write("</table><br />");
+        
+        document.write("<input type=\"button\" value='Calculate' onlick=\"process()\">");
+        
+        document.write("<input type=\"reset\" value=\"Reset\" size=\"10\">");
+        
+        document.write("</form>");
+        
+        document.write("</div>");
+        
+        function process()
+        {
+          //set the variable to the forms fields.
+          number1 = parseFloat(document.forms["myform"].elements["no1"].value);
+          number2 = parseFloat(document.forms["myform"].elements["no2"].value);
+          number3 = parseFloat(document.forms["myform"].elements["no3"].value);
+          
+          //add the sum, average and product
+          sumTotal = num1 + num2 + num3;
+          averageTotal = (num1 + num2 + num3) / 3;
+          productTotal = num1 * num2 * num3;
+          
+          
+          
+        }
+      </script>
 </body>
 </html>
