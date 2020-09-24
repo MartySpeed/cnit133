@@ -20,7 +20,7 @@
         </ul>
     </nav>
     <!--navlink end-->
-<section>
+<section class="grade-chart">
         <!--grade form start-->
         <script>
             document.write("<div align=\"left\">");
@@ -50,6 +50,27 @@
             document.write("</div>");
           </script>
           <!--grade form end-->
+</section>
+<section class="grade-scale">
+<!--grade scale start-->
+<script>
+    //variables for grading rubrik
+    var finalaverage, hwAvg, midExam, finalExam, participation, A, B, C, D, F;
+    finalaverage = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation);
+    
+    document.write("<div align=\"left\"");
+    document.write("<form name='formtwo'>");
+    document.write("<table border=\"4\">");
+    document.write("<tr><th align=\"center\" colspan=\"6\">Grading Rubrik</th></tr>");
+    document.write("<tr><th align=\"center\">Homework Average</th><td><input type=\"text\" size=\"5\"></td></tr>");
+    document.write("<tr><th align=\"center\">Midterm Exam</th><td><input type=\"text\" size=\"5\"></td></tr>");
+    document.write("<tr><th align=\"center\">Final Exam</th><td><input type=\"text\" size=\"5\"></td></tr>");
+    document.write("<tr><th align=\"center\">Participation</th><td><input type=\"text\" size=\"5\"></td></tr>");
+    document.write("<tr><th align=\"center\">Final Average</th><td><input type=\"text\" size=\"5\"></td></tr>");
+    document.write("</form>");
+    document.write("</div>");
+  </script>
+<!--grade scale end-->
 </section>
 </body>
 </html>
