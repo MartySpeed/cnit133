@@ -12,8 +12,8 @@
     <nav>
         <ul>
             <li><a href="hw2.html">Homework 2</a></li>
-            <li><a href="part1.html">Part 1</a></li>
-            <li><a href="part3.html">Part 3</a></li>
+            <li><a href="part2-1.html">Part 1</a></li>
+            <li><a href="part2-3.html">Part 3</a></li>
         </ul>
     </nav>
     <p>
@@ -43,14 +43,8 @@
 
     <script>
         //variables
-        var s1, s2, s3, sum, average, product, sumTotal, averageTotal, productTotal;
-        
-        num1 = 0;
-        num2 = 0;
-        num3 = 0;
-        sum = 0;
-        average = 0;
-        product = 0;
+        var num1, num2, num3, sumTotal, averageTotal, productTotal;
+
         sumTotal = 0;
         averageTotal = 0;
         productTotal = 0;
@@ -66,11 +60,11 @@
         
         document.write("<tr><th>Number 1</th><th>Number 2</th><th>Number 3</th></tr>");
         
-        document.write("<tr><td><input type=\"text\" autofocus name=\"no1\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" autofocus name=\"no2\" class=\"r\" size=\"20\"></td></td><td><input type =\"text\" autofocus name=\"no3\" class=\"r\" size=\"20\"</td></td></tr>");
+        document.write("<tr><td><input type=\"text\" autofocus name=\"no1\" class=\"r\" size=\"20\" /></td></td><td><input type=\"text\" autofocus name=\"no2\" class=\"r\" size=\"20\" /></td></td><td><input type =\"text\" autofocus name=\"no3\" class=\"r\" size=\"20\" /</td></td></tr>");
         
         document.write("<tr><th>Sum Total</th><th>Average Total</th><th>Product Total</th></tr>");
         
-        document.write ("<tr><td><input type=\"text\" disabled=\"disabled\" autofocus name=\"sTotal\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" disabled=\"disabled\" autofocus name=\"aTotal\" class=\"r\" size=\"20\"></td><td><input type=\"text\" disabled=\"disabled\" name=\"pTotal\" class=\"r\" size=\"20\"></td></tr>");
+        document.write ("<tr><td><input type=\"text\" disabled=\"disabled\" name=\"stotal\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" disabled=\"disabled\" name=\"atotal\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" disabled=\"disabled\" name=\"ptotal\" class=\"r\" size=\"20\"></td></tr>");
         
         document.write("</table><br />");
         
@@ -85,17 +79,21 @@
         function process()
         {
           //set the variable to the forms fields.
-          number1 = parseFloat(document.forms["myform"].elements["no1"].value);
-          number2 = parseFloat(document.forms["myform"].elements["no2"].value);
-          number3 = parseFloat(document.forms["myform"].elements["no3"].value);
+          num1 = document.getElementById("no1").value;
+          num2 = document.getElementById("no2").value;
+          num3 = document.getElementById("no3").value;
           
+          n1 = parseInt(num1);
+          n2 = parseInt(num2);
+          n3 = parseInt(num3);
+
           //add the sum, average and product
           sumTotal = num1 + num2 + num3;
           averageTotal = (num1 + num2 + num3) / 3;
           productTotal = num1 * num2 * num3;
-          
-          
-          
+
+          document.getElementById("stotal").value = ("The input numbers were " + n1 + ", " + n2 + ", " + n3 + 
+          "\nThe sum is " + sum + "\nThe average is " + average + "\nThe product is " + product);
         }
       </script>
 </body>
