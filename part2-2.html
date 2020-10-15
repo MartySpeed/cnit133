@@ -43,58 +43,14 @@
 
     <script>
         //variables
-        var num1, num2, num3, sumTotal, averageTotal, productTotal;
+        var num1, num2, num3, numsum, numaverage, numproduct, numlarge, numsmall;
 
-        sumTotal = 0;
-        averageTotal = 0;
-        productTotal = 0;
-        
-        //output table
-        document.write("<div align=\"center\">");
-        
-        document.write("<form name='myform'>");
-        
-        document.write("<table border=\"1\">");
-        
-        document.write("<tr><th align=\"center\" colspan=\"3\">Howework 2 Part 2</th></tr>");
-        
-        document.write("<tr><th>Number 1</th><th>Number 2</th><th>Number 3</th></tr>");
-        
-        document.write("<tr><td><input type=\"text\" autofocus name=\"no1\" class=\"r\" size=\"20\" /></td></td><td><input type=\"text\" autofocus name=\"no2\" class=\"r\" size=\"20\" /></td></td><td><input type =\"text\" autofocus name=\"no3\" class=\"r\" size=\"20\" /</td></td></tr>");
-        
-        document.write("<tr><th>Sum Total</th><th>Average Total</th><th>Product Total</th></tr>");
-        
-        document.write ("<tr><td><input type=\"text\" disabled=\"disabled\" name=\"stotal\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" disabled=\"disabled\" name=\"atotal\" class=\"r\" size=\"20\"></td></td><td><input type=\"text\" disabled=\"disabled\" name=\"ptotal\" class=\"r\" size=\"20\"></td></tr>");
-        
-        document.write("</table><br />");
-        
-        document.write("<input type=\"button\" value='Calculate' onlick=\"process()\">");
-        
-        document.write("<input type=\"reset\" value=\"Reset\" size=\"10\">");
-        
-        document.write("</form>");
-        
-        document.write("</div>");
-        
-        function process()
-        {
-          //set the variable to the forms fields.
-          num1 = document.getElementById("no1").value;
-          num2 = document.getElementById("no2").value;
-          num3 = document.getElementById("no3").value;
-          
-          n1 = parseInt(num1);
-          n2 = parseInt(num2);
-          n3 = parseInt(num3);
-
-          //add the sum, average and product
-          sumTotal = num1 + num2 + num3;
-          averageTotal = (num1 + num2 + num3) / 3;
-          productTotal = num1 * num2 * num3;
-
-          document.getElementById("stotal").value = ("The input numbers were " + n1 + ", " + n2 + ", " + n3 + 
-          "\nThe sum is " + sum + "\nThe average is " + average + "\nThe product is " + product);
-        }
+        num1 = 0;
+        num2 = 0;
+        num3 = 0;
+        numsum = num1 + num2 + num3;
+        numaverage = (num1 + num2 + num3) / 3;
+        numproduct = num1 * num2 * num3;
       </script>
 </body>
 </html>
