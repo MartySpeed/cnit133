@@ -45,7 +45,7 @@
         function process()
         {
             //variables
-            var num1, num2, num3, numsum, numaverage, numproduct, numlarge, numsmall;
+            var num1, num2, num3, numsum, numaverage, numproduct, numlarge = 0, numsmall = 0;
 
             num1 = 0;
             num2 = 0;
@@ -64,9 +64,23 @@
             n2 = parseInt(number2);
             n3 = parseInt(number3);
 
+            // check for the largest and smallest number of the three.
+            //check each number for the highest and smallest value
+            if (n1 >= n2 & n3)
+                numlarge = numlarge + 1;
+            if (n1 <= n2 & n3)
+                numsmall = numsmall + 1;
+            if (n2 >= n1 & n3)
+                numlarge = numlarge + 1;
+            if (n2 <= n1 & n3)
+                numsmall = numsmall + 1;
+            if (n3 >= n1 & n2)
+                numlarge = numlarge + 1;
+            if (n3 <= n1 & n2)
+                numsmall = numsmall + 1;
 
-
-
+            // display the entered numbers and other results.
+            document.getElementById("result").value = ("The inputted numbers were" + n1 + ", " + n2 + ", " + n3 + "\nThis is the smallest number " + numsmall + "\nThis is the largest number " + numlarge + "\nThis is the sum " + numsum + "\nThis is product " + numproduct + "\nThis is the average " + numaverage)
 
         }
     </script>
